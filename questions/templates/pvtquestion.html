@@ -1,0 +1,127 @@
+{%  extends 'usermain.html' %}
+{% block content %}
+
+<style type="text/css">
+    
+    .center {
+  width: 1500px;
+}
+.wrapper {
+ 
+  text-align: center;
+}
+</style>
+
+<br>
+<form action="" method="POST">
+    {% csrf_token %}
+    Question 1 : {{ form.promt1 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt11 }}</p>
+    <p class="">Option 2 : {{ form.opt12 }}</p>
+    <p class="">Option 3 : {{ form.opt13 }}</p>
+    <p class="">Option 4 : {{ form.opt14 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct1 }}</p>
+    <br>
+    <br>
+    Question 2 : {{ form.promt2 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt21 }}</p>
+    <p class="">Option 2 : {{ form.opt22 }}</p>
+    <p class="">Option 3 : {{ form.opt23 }}</p>
+    <p class="">Option 4 : {{ form.opt24 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct2 }}</p>
+    <br>
+    <br>
+    Question 3 : {{ form.promt3 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt31 }}</p>
+    <p class="">Option 2 : {{ form.opt32 }}</p>
+    <p class="">Option 3 : {{ form.opt33 }}</p>
+    <p class="">Option 4 : {{ form.opt34 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct3 }}</p>
+    <br>
+    <br>
+    Question 4 : {{ form.promt4 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt41 }}</p>
+    <p class="">Option 2 : {{ form.opt42 }}</p>
+    <p class="">Option 3 : {{ form.opt43 }}</p>
+    <p class="">Option 4 : {{ form.opt44 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct4 }}</p>
+    <br>
+    <br>
+    Question 5 : {{ form.promt5 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt51 }}</p>
+    <p class="">Option 2 : {{ form.opt52 }}</p>
+    <p class="">Option 3 : {{ form.opt53 }}</p>
+    <p class="">Option 4 : {{ form.opt54 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct5 }}</p>
+    <br>
+    <br>
+    Question 6 : {{ form.promt6 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt61 }}</p>
+    <p class="">Option 2 : {{ form.opt62 }}</p>
+    <p class="">Option 3 : {{ form.opt63 }}</p>
+    <p class="">Option 4 : {{ form.opt64 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct6 }}</p>
+    <br>
+    <br>
+    Question 7 : {{ form.promt7 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt71 }}
+    <p class="">Option 2 : {{ form.opt72 }}
+    <p class="">Option 3 : {{ form.opt73 }}
+    <p class="">Option 4 : {{ form.opt74 }}
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct7 }}</p>
+    <br>
+    <br>
+    Question 8 : {{ form.promt8 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt81 }}</p>
+    <p class="">Option 2 : {{ form.opt82 }}</p>
+    <p class="">Option 3 : {{ form.opt83 }}</p>
+    <p class="">Option 4 : {{ form.opt84 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct8 }}</p>
+    <br>
+    <br>
+    Question 9 : {{ form.promt9 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt91 }}</p>
+    <p class="">Option 2 : {{ form.opt92 }}</p>
+    <p class="">Option 3 : {{ form.opt93 }}</p>
+    <p class="">Option 4 : {{ form.opt94 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct9 }}</p>
+    <br>
+    <br>
+
+    Question 10 : {{ form.promt10 }}
+    <br>
+    <p class="">Option 1 : {{ form.opt101 }}</p>
+    <p class="">Option 2 : {{ form.opt102 }}</p>
+    <p class="">Option 3 : {{ form.opt103 }}</p>
+    <p class="">Option 4 : {{ form.opt104 }}</p>
+    <br>
+    <p class="wrapper">Correct Answer : {{ form.correct10 }}</p>
+    <br>
+
+
+
+    <br>
+
+   <p class="wrapper"><button type="submit" class="btn btn-primary btn-lg">Create</button></p>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,225 @@
+{%  extends 'usermain.html' %}
+{% block content %}
+
+
+
+<script>
+
+     var sec = 0;
+    function pad ( val ) { return val > 9 ? val : "0" + val; }
+    setInterval( function(){
+        document.getElementById("seconds").innerHTML=pad(++sec%60);
+        document.getElementById("minutes").innerHTML=pad(parseInt(sec/60,10));
+    }, 1000);
+</script>
+
+
+
+<style>
+.wrapper {
+ 
+  text-align: center;
+}
+</style>
+<div class="wrapper" >
+    <span id="minutes"></span>:<span id="seconds"></span>
+    <br>
+    <br>
+<form action="" method="post">
+    {% csrf_token %}
+
+    
+    <p><strong>Q1</strong>: {{ form1.promt1 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt11}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt12}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt13}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt14}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response1}}<br>
+    <br>
+    <p><strong>Q2</strong>: {{ form1.promt2 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt21}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt22}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt23}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt24}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response2}}<br>
+    <br>
+    <p><strong>Q3</strong>: {{ form1.promt3 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt31}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt32}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt33}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt34}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response3}}<br>
+    <br>
+    <p><strong>Q4</strong>: {{ form1.promt4 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt41}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt42}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt43}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt44}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response4}}<br>
+    <br>
+    <p><strong>Q5</strong>: {{ form1.promt5 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt51}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt52}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt53}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt54}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response5}}<br>
+    <br>
+
+
+    <p><strong>Q6</strong>: {{ form1.promt6 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt61}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt62}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt63}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt64}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response6}}<br>
+    <br>
+    <p><strong>Q7</strong>: {{ form1.promt7 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt71}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt72}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt73}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt74}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response7}}<br>
+    <br>
+    <p><strong>Q8</strong>: {{ form1.promt8 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt81}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt82}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt83}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt84}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response8}}<br>
+    <br>
+    <p><strong>Q9</strong>: {{ form1.promt9 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt91}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt92}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt93}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt94}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response9}}<br>
+    <br>
+    <p><strong>Q10</strong>: {{ form1.promt10 }}</p>
+    <strong>(A)</strong>&nbsp;{{form1.opt101}}<br>
+    <strong>(B)</strong>&nbsp;{{form1.opt102}}<br>
+    <strong>(C)</strong>&nbsp;{{form1.opt103}}<br>
+    <strong>(D)</strong>&nbsp;{{form1.opt104}}<br>
+    <br>
+    <strong>Type Your Response:</strong>&nbsp;{{form2.user_response10}}<br>
+    <br>
+
+
+<!--
+    <p><strong>Q1</strong>: {{ form1.promt1 }}</p>
+        <label>
+            <input type="radio" name="one" value="a">{{form1.opt11}}</label>
+        <label>
+            <input type="radio" name="one" value="b">{{form1.opt12}}</label>
+        <label>
+            <input type="radio" name="one" value="c">{{form1.opt13}}</label>
+        <label>
+            <input type="radio" name="one" value="d">{{form1.opt14}}</label>
+    <br>
+    <p><strong>Q2</strong>: {{ form1.promt2 }}</p>
+        <label>
+            <input type="radio" name="two" value="a">{{form1.opt21}}</label>
+        <label>
+            <input type="radio" name="two" value="b">{{form1.opt22}}</label>
+        <label>
+            <input type="radio" name="two" value="c">{{form1.opt23}}</label>
+        <label>
+            <input type="radio" name="two" value="d">{{form1.opt24}}</label>
+    <br>
+    <p><strong>Q3</strong>: {{ form1.promt3 }}</p>
+        <label>
+            <input type="radio" name="three" value="a">{{form1.opt31}}</label>
+        <label>
+            <input type="radio" name="three" value="b">{{form1.opt32}}</label>
+        <label>
+            <input type="radio" name="three" value="c">{{form1.opt33}}</label>
+        <label>
+            <input type="radio" name="three" value="d">{{form1.opt34}}</label>
+    <br>
+    <p><strong>Q4</strong>: {{ form1.promt4 }}</p>
+        <label>
+            <input type="radio" name="four" value="a">{{form1.opt41}}</label>
+        <label>
+            <input type="radio" name="four" value="b">{{form1.opt42}}</label>
+        <label>
+            <input type="radio" name="four" value="c">{{form1.opt43}}</label>
+        <label>
+            <input type="radio" name="four" value="d">{{form1.opt44}}</label>
+
+    <br>
+    <p><strong>Q5</strong>: {{ form1.promt5 }}</p>
+        <label>
+            <input type="radio" name="five" value="a">{{form1.opt51}}</label>
+        <label>
+            <input type="radio" name="five" value="b">{{form1.opt52}}</label>
+        <label>
+            <input type="radio" name="five" value="c">{{form1.opt53}}</label>
+        <label>
+            <input type="radio" name="five" value="d">{{form1.opt54}}</label>
+    <br>
+    <p><strong>Q6</strong>: {{ form1.promt6 }}</p>
+        <label>
+            <input type="radio" name="six" value="a">{{form1.opt61}}</label>
+        <label>
+            <input type="radio" name="six" value="b">{{form1.opt62}}</label>
+        <label>
+            <input type="radio" name="six" value="c">{{form1.opt63}}</label>
+        <label>
+            <input type="radio" name="six" value="d">{{form1.opt64}}</label>
+   <p><strong>Q7</strong>: {{ form1.promt7 }}</p>
+        <label>
+            <input type="radio" name="seven" value="a">{{form1.opt71}}</label>
+        <label>
+            <input type="radio" name="seven" value="b">{{form1.opt72}}</label>
+        <label>
+            <input type="radio" name="seven" value="c">{{form1.opt73}}</label>
+        <label>
+            <input type="radio" name="seven" value="d">{{form1.opt74}}</label>
+
+    <br>
+    <p><strong>Q8</strong>: {{ form1.promt8 }}</p>
+        <label>
+            <input type="radio" name="eight" value="a">{{form1.opt81}}</label>
+        <label>
+            <input type="radio" name="eight" value="b">{{form1.opt82}}</label>
+        <label>
+            <input type="radio" name="eight" value="c">{{form1.opt83}}</label>
+        <label>
+            <input type="radio" name="eight" value="d">{{form1.opt84}}</label>
+
+    <br>
+    <p><strong>Q9</strong>: {{ form1.promt9 }}</p>
+        <label>
+            <input type="radio" name="nine" value="a">{{form1.opt91}}</label>
+        <label>
+            <input type="radio" name="nine" value="b">{{form1.opt92}}</label>
+        <label>
+            <input type="radio" name="nine" value="c">{{form1.opt93}}</label>
+        <label>
+            <input type="radio" name="nine" value="d">{{form1.opt94}}</label>
+    <br>
+    <p><strong>Q10</strong>: {{ form1.promt10 }}</p>
+        <label>
+            <input type="radio" name="ten" value="a">{{form1.opt101}}</label>
+        <label>
+            <input type="radio" name="ten" value="b">{{form1.opt102}}</label>
+        <label>
+            <input type="radio" name="ten" value="c">{{form1.opt103}}</label>
+        <label>
+            <input type="radio" name="ten" value="d">{{form1.opt104}}</label>
+    <br>
+-->
+
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg">Submit Attempt</button>
+</form>
+</div>
+{%endblock%}
